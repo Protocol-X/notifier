@@ -21,7 +21,8 @@
             <version>3.1</version>
             <configuration>
                 <fork>true</fork>
-                <executable>C:\Program Files\Java\jdk1.8.0_111\bin\javac.exe</executable>
+                <executable>C:\Program Files\Java\jdk1.8.0_91\bin\javac.exe</executable>
+                <!-- <executable>C:\Program Files\Java\jdk1.8.0_111\bin\javac.exe</executable> -->
             </configuration>
         </plugin>
     </plugins>
@@ -54,30 +55,6 @@
 		    <artifactId>flink-jdbc</artifactId>
 		    <version>1.0.3</version>
 		</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core_2.10 -->
-<dependency>
-    <groupId>org.apache.spark</groupId>
-    <artifactId>spark-core_2.10</artifactId>
-    <version>1.6.2</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-streaming_2.10 -->
-<dependency>
-    <groupId>org.apache.spark</groupId>
-    <artifactId>spark-streaming_2.10</artifactId>
-    <version>1.6.2</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql_2.10 -->
-<dependency>
-    <groupId>org.apache.spark</groupId>
-    <artifactId>spark-sql_2.10</artifactId>
-    <version>1.6.2</version>
-</dependency>  
-<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka_2.10 -->
-<dependency>
-    <groupId>org.apache.spark</groupId>
-    <artifactId>spark-streaming-kafka_2.10</artifactId>
-    <version>1.6.2</version>
-</dependency>
 <dependency>
     <groupId>log4j</groupId>
     <artifactId>log4j</artifactId>

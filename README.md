@@ -1,3 +1,3 @@
 # notifier
 
-- [CLick Here for the interface](https://github.com/hemantdindi/notifier-web/README.md)
+- [Click Here for the interface](https://github.com/hemantdindi/notifier-web/)

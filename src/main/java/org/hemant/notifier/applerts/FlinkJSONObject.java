@@ -1,4 +1,4 @@
-package org.hemant.apps.notifier.applerts;
+package org.hemant.notifier.applerts;
 import org.joda.time.format.DateTimeFormat      ;
 import org.joda.time.format.DateTimeFormatter   ;
 import java.io.InputStreamReader                ;

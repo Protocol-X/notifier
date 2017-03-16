@@ -1,4 +1,4 @@
-package org.hemant.apps.notifier.applerts;
+package org.hemant.notifier.applerts;
 
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 

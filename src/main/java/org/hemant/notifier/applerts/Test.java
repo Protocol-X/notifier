@@ -1,4 +1,4 @@
-package org.hemant.apps.notifier.applerts;
+package org.hemant.notifier.applerts;
 
 public class Test {
 

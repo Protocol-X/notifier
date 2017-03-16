@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.hemant.apps</groupId>
-  <artifactId>applerts</artifactId>
+  <groupId>org.hemant</groupId>
+  <artifactId>notifier</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>applerts</name>
+  <name>notifier</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -55,6 +55,16 @@
 		    <artifactId>flink-jdbc</artifactId>
 		    <version>1.0.3</version>
 		</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.flink/flink-examples -->
+<!-- https://mvnrepository.com/artifact/org.apache.flink/flink-runtime_2.10 -->
+<dependency>
+    <groupId>org.apache.flink</groupId>
+    <artifactId>flink-runtime_2.10</artifactId>
+    <version>1.2.0</version>
+</dependency>
+
+
+		
 <dependency>
     <groupId>log4j</groupId>
     <artifactId>log4j</artifactId>

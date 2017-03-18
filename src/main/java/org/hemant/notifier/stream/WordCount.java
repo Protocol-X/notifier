@@ -48,12 +48,12 @@ public class WordCount {
 		DataSet<String> text = null;
 		if (params.has("input")) {
 			// read the text file from given input path
-			text = env.readTextFile("C:/Users/hedindi/workspace/eyes/conf/log4j.properties");
+			text = env.readTextFile("C:/Users/hemant.HEMANTDINDI/git/notifier/conf/log4j.properties");
 		} else {
 			// get default test text data
 			System.out.println("Executing WordCount example with default input data set.");
 			System.out.println("Use --input to specify file input.");
-			text = env.readTextFile("C:/Users/hedindi/workspace/eyes/conf/log4j.properties");
+			text = env.readTextFile("C:/Users/hemant.HEMANTDINDI/git/notifier/conf/log4j.properties");
 			//text = WordCountData.getDefaultTextLineDataSet(env);
 		}
 

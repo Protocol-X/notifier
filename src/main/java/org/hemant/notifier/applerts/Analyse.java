@@ -33,7 +33,7 @@ public class Analyse {
     public static void main(String[] args) throws Exception {
         String propertiesFile;
         if(args.length == 0 )
-            propertiesFile = "C:/Users/hedindi/workspace/eyes/conf/config.ini";
+            propertiesFile = "C:/Users/hemant.HEMANTDINDI/git/notifier/conf/config.ini";
         else
             propertiesFile = args[0].trim();
         final ParameterTool parameter = ParameterTool.fromPropertiesFile(propertiesFile);

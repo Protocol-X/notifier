@@ -15,7 +15,10 @@ public class AppPOJO {
     String elapsedTime;
     String diagnostics;
 
-    AppPOJO() {    }
+    public AppPOJO() {  
+
+
+    }
     public AppPOJO(String id,String name,String user,String finalStatus,String trackingUrl,String applicationType,String startedTime,String finishedTime,String elapsedTime,String diagnostics){
         setId(id);
         setName(name);

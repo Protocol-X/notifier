@@ -183,8 +183,8 @@ public class Analyse {
                         analyse_app_log.error("Unable to get Email ID"+e);
                     }
 
-                    MailAlert m = new MailAlert();
-                    m.sendMail(appPOJO,parameter.getRequired("smtphost").trim(),parameter.getInt("smtpport"),parameter.getRequired("smtpsender"),parameter.getRequired("alertcc"),emailId);
+                    //MailAlert m = new MailAlert();
+                    //m.sendMail(appPOJO,parameter.getRequired("smtphost").trim(),parameter.getInt("smtpport"),parameter.getRequired("smtpsender"),parameter.getRequired("alertcc"),emailId);
                 }
 
                 String query ="insert into applerts_db" +

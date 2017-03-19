@@ -1,5 +1,5 @@
 package org.hemant.notifier.stream;
-
+/* Hemant Dindi */
 public class AuditPOJO {
 	String logdate	;
 	String allowed	;

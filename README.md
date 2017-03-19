@@ -1,5 +1,8 @@
-# Notifier
+# Notifier Architecture (Proposed)
+
+![Alt text](./notifier.jpg)
 
 
+# Interface
 
-- [Click Here for the interface](https://github.com/hemantdindi/notifier-web/)
+- [Interface](https://github.com/hemantdindi/notifier-web/)

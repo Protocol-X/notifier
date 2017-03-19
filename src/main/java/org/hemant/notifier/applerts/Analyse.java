@@ -1,6 +1,6 @@
 package org.hemant.notifier.applerts;
 
-/* Start up pint*/
+/* Hemant Dindi */
 import org.apache.flink.api.common.JobExecutionResult							;
 import org.apache.flink.api.common.functions.FilterFunction                     ;
 import org.apache.flink.api.common.functions.RichFlatMapFunction                ;

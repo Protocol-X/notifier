@@ -2270,3 +2270,415 @@ Failing this attempt. Failing the application.'
 18-Mar-2017 14:07:34,422 DEBUG TaskManager:86 - Sending heartbeat to JobManager
 18-Mar-2017 14:07:39,433 DEBUG TaskManager:86 - Sending heartbeat to JobManager
 18-Mar-2017 14:07:44,421 DEBUG TaskManager:86 - Sending heartbeat to JobManager
+19-Mar-2017 19:28:17,719 DEBUG StreamGraphGenerator:149 - Transforming OneInputTransformation{id=3, name='Map', outputType=PojoType<org.hemant.notifier.stream.AuditPOJO, fields = [allowed: String, auth: String, cmd: String, dst: String, ip: String, logdate: String, perm: String, proto: String, src: String, ugi: String]>, parallelism=4}
+19-Mar-2017 19:28:17,737 DEBUG StreamGraphGenerator:149 - Transforming PartitionTransformation{id=2, name='Partition', outputType=String, parallelism=1}
+19-Mar-2017 19:28:17,740 DEBUG StreamGraphGenerator:149 - Transforming SourceTransformation{id=1, name='Collection Source', outputType=String, parallelism=1}
+19-Mar-2017 19:28:17,751 DEBUG StreamGraph:217 - Vertex: 1
+19-Mar-2017 19:28:17,763 DEBUG StreamGraph:217 - Vertex: 3
+19-Mar-2017 19:28:17,784 DEBUG StreamGraphHasherV2:271 - Generated hash 'bc764cd8ddf7a0cff126f51c16239658' for node 'Source: Collection Source-1' {id: 1, parallelism: 1, user function: org.apache.flink.streaming.api.functions.source.FromElementsFunction}
+19-Mar-2017 19:28:17,784 DEBUG StreamGraphHasherV2:271 - Generated hash '0a448493b4782967b150582570326227' for node 'Map-3' {id: 3, parallelism: 4, user function: org.hemant.notifier.stream.FetchHDFSAudit$1}
+19-Mar-2017 19:28:17,785 DEBUG StreamGraphHasherV1:253 - Generated hash '24958149568b589d8136ac5d480d8e13' for node 'Source: Collection Source-1' {id: 1, parallelism: 1, user function: org.apache.flink.streaming.api.functions.source.FromElementsFunction}
+19-Mar-2017 19:28:17,785 DEBUG StreamGraphHasherV1:253 - Generated hash '4dfc47dd2d4eeda4a789a996962a8da7' for node 'Map-3' {id: 3, parallelism: 4, user function: org.hemant.notifier.stream.FetchHDFSAudit$1}
+19-Mar-2017 19:28:17,787 DEBUG StreamingJobGraphGenerator:316 - Parallelism set: 4 for 3
+19-Mar-2017 19:28:17,810 DEBUG StreamingJobGraphGenerator:316 - Parallelism set: 1 for 1
+19-Mar-2017 19:28:17,828 DEBUG StreamingJobGraphGenerator:413 - CONNECTED: RebalancePartitioner - 1 -> 3
+19-Mar-2017 19:28:17,834  INFO LocalStreamEnvironment:101 - Running job on local embedded Flink mini cluster
+19-Mar-2017 19:28:18,094  INFO FlinkMiniCluster:79 - Disabled queryable state server
+19-Mar-2017 19:28:18,157  INFO FlinkMiniCluster:313 - Starting FlinkMiniCluster.
+19-Mar-2017 19:28:18,568  INFO Slf4jLogger:80 - Slf4jLogger started
+19-Mar-2017 19:28:18,587 DEBUG EventStream:77 - logger log1-Slf4jLogger started
+19-Mar-2017 19:28:18,591 DEBUG EventStream:77 - Default Loggers started
+19-Mar-2017 19:28:18,723  INFO BlobServer:109 - Created BLOB server storage directory C:\Users\HEMANT~1.HEM\AppData\Local\Temp\blobStore-11663014-b8f9-4036-b1d2-5c67da2a1df3
+19-Mar-2017 19:28:18,727 DEBUG NetUtils:361 - Trying to open socket on port 0
+19-Mar-2017 19:28:18,730  INFO BlobServer:187 - Started BLOB server at 0.0.0.0:49254 - max concurrent requests: 50 - max backlog: 1000
+19-Mar-2017 19:28:18,746  INFO MetricRegistry:83 - No metrics reporter configured, no metrics will be exposed/reported.
+19-Mar-2017 19:28:18,753  INFO MemoryArchivist:128 - Started memory archivist akka://flink/user/archive_1
+19-Mar-2017 19:28:18,757  INFO JobManager:128 - Starting JobManager at akka://flink/user/jobmanager_1.
+19-Mar-2017 19:28:18,765 DEBUG StandaloneResourceManager:408 - Received new leading JobManager akka://flink/user/jobmanager_1. Connecting.
+19-Mar-2017 19:28:18,777  INFO StandaloneResourceManager:431 - Trying to associate with JobManager leader akka://flink/user/jobmanager_1
+19-Mar-2017 19:28:18,783  INFO TaskManager:128 - Messages between TaskManager and JobManager have a max timeout of 10000 milliseconds
+19-Mar-2017 19:28:18,789  INFO TaskManager:128 - Temporary file directory 'C:\Users\HEMANT~1.HEM\AppData\Local\Temp': total 150 GB, usable 37 GB (24.67% usable)
+19-Mar-2017 19:28:18,821  INFO NetworkBufferPool:121 - Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768).
+19-Mar-2017 19:28:18,834  INFO NetworkEnvironment:268 - Starting the network environment and its components.
+19-Mar-2017 19:28:18,834 DEBUG NetworkEnvironment:271 - Starting network connection manager
+19-Mar-2017 19:28:18,836  WARN TaskManagerLocation:102 - No hostname could be resolved for the IP address 127.0.0.1, using IP address as host name. Local input split assignment (such as for HDFS files) may be impacted.
+19-Mar-2017 19:28:18,837  INFO TaskManager:128 - Limiting managed memory to 1221 MB, memory will be allocated lazily.
+19-Mar-2017 19:28:18,844  INFO IOManager:95 - I/O manager uses directory C:\Users\HEMANT~1.HEM\AppData\Local\Temp\flink-io-be3506ea-8350-4ad7-be54-82fcd614dc4e for spill files.
+19-Mar-2017 19:28:18,846  INFO MetricRegistry:83 - No metrics reporter configured, no metrics will be exposed/reported.
+19-Mar-2017 19:28:18,855  INFO FileCache:87 - User file cache uses directory C:\Users\HEMANT~1.HEM\AppData\Local\Temp\flink-dist-cache-b4768ebc-249d-4c56-b3b6-efe69d897027
+19-Mar-2017 19:28:18,869  INFO TaskManager:128 - Starting TaskManager actor at akka://flink/user/taskmanager_1#331516063.
+19-Mar-2017 19:28:18,870  INFO TaskManager:128 - TaskManager data connection information: ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1)
+19-Mar-2017 19:28:18,870  INFO TaskManager:128 - TaskManager has 4 task slot(s).
+19-Mar-2017 19:28:18,873  INFO TaskManager:128 - Memory usage stats: [HEAP: 82/245/3623 MB, NON HEAP: 23/23/-1 MB (used/committed/max)]
+19-Mar-2017 19:28:18,884  INFO TaskManager:128 - Trying to register at JobManager akka://flink/user/jobmanager_1 (attempt 1, timeout: 500 milliseconds)
+19-Mar-2017 19:28:18,943  INFO JobManager:128 - JobManager akka://flink/user/jobmanager_1 was granted leadership with leader session ID None.
+19-Mar-2017 19:28:18,946 DEBUG JobManager:86 - Resource manager registration: RegisterResourceManager akka://flink/user/resourcemanager_1
+19-Mar-2017 19:28:18,951  INFO StandaloneResourceManager:489 - Resource Manager associating with leading JobManager Actor[akka://flink/user/jobmanager_1#-2132543667] - leader session null
+19-Mar-2017 19:28:18,952 DEBUG JobManager:86 - RegisterTaskManager: RegisterTaskManager(ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'},ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1),cores=4, physMem=17089843200, heap=3799515136, managed=1280311296,4)
+19-Mar-2017 19:28:18,952  INFO StandaloneResourceManager:368 - TaskManager ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} has started.
+19-Mar-2017 19:28:18,955  INFO InstanceManager:176 - Registered TaskManager at 127.0.0.1 (akka://flink/user/taskmanager_1) as b83145049bda17e3ca04b4bcb0faf18b. Current number of registered hosts is 1. Current number of alive task slots is 4.
+19-Mar-2017 19:28:18,959  INFO TaskManager:128 - Successful registration at JobManager (akka://flink/user/jobmanager_1), starting network stack and library cache.
+19-Mar-2017 19:28:18,961  INFO TaskManager:128 - Determined BLOB server address to be localhost/127.0.0.1:49254. Starting BLOB cache.
+19-Mar-2017 19:28:18,963  INFO BlobCache:76 - Created BLOB cache storage directory C:\Users\HEMANT~1.HEM\AppData\Local\Temp\blobStore-f01e1c04-3412-4c3b-a05a-f188b028f262
+19-Mar-2017 19:28:18,975  INFO JobSubmissionClientActor:302 - Disconnect from JobManager null.
+19-Mar-2017 19:28:18,980  INFO JobSubmissionClientActor:223 - Received SubmitJobAndWait(JobGraph(jobId: 705da72b157fe65f74e5d00f3d27db7d)) but there is no connection to a JobManager yet.
+19-Mar-2017 19:28:18,980  INFO JobSubmissionClientActor:91 - Received job Flink Streaming Job (705da72b157fe65f74e5d00f3d27db7d).
+19-Mar-2017 19:28:18,980  INFO JobSubmissionClientActor:310 - Connect to JobManager Actor[akka://flink/user/jobmanager_1#-2132543667].
+19-Mar-2017 19:28:18,980  INFO JobSubmissionClientActor:315 - Connected to new JobManager akka://flink/user/jobmanager_1.
+19-Mar-2017 19:28:18,981  INFO JobSubmissionClientActor:258 - Connected to JobManager at Actor[akka://flink/user/jobmanager_1#-2132543667]
+19-Mar-2017 19:28:18,981  INFO JobSubmissionClientActor:137 - Sending message to JobManager akka://flink/user/jobmanager_1 to submit job Flink Streaming Job (705da72b157fe65f74e5d00f3d27db7d) and wait for progress
+19-Mar-2017 19:28:18,982  INFO JobSubmissionClientActor:145 - Upload jar files to job manager akka://flink/user/jobmanager_1.
+19-Mar-2017 19:28:18,985  INFO JobSubmissionClientActor:163 - Submit job to the job manager akka://flink/user/jobmanager_1.
+19-Mar-2017 19:28:18,988  INFO JobManager:128 - Submitting job 705da72b157fe65f74e5d00f3d27db7d (Flink Streaming Job).
+19-Mar-2017 19:28:19,046  INFO JobManager:128 - Using restart strategy NoRestartStrategy for 705da72b157fe65f74e5d00f3d27db7d.
+19-Mar-2017 19:28:19,138  INFO JobManager:119 - Running initialization on master for job Flink Streaming Job (705da72b157fe65f74e5d00f3d27db7d).
+19-Mar-2017 19:28:19,138  INFO JobManager:141 - Successfully ran initialization on master in 0 ms.
+19-Mar-2017 19:28:19,138 DEBUG JobManager:147 - Adding 2 vertices from job graph Flink Streaming Job (705da72b157fe65f74e5d00f3d27db7d).
+19-Mar-2017 19:28:19,139 DEBUG ExecutionGraph:653 - Attaching 2 topologically sorted vertices to existing job graph with 0 vertices and 0 intermediate results.
+19-Mar-2017 19:28:19,150 DEBUG ExecutionGraph:350 - Connecting ExecutionJobVertex bc764cd8ddf7a0cff126f51c16239658 (Source: Collection Source) to 0 predecessors.
+19-Mar-2017 19:28:19,151 DEBUG ExecutionGraph:350 - Connecting ExecutionJobVertex 0a448493b4782967b150582570326227 (Map) to 1 predecessors.
+19-Mar-2017 19:28:19,151 DEBUG ExecutionGraph:361 - Connecting input 0 of vertex 0a448493b4782967b150582570326227 (Map) to intermediate result referenced via predecessor bc764cd8ddf7a0cff126f51c16239658 (Source: Collection Source).
+19-Mar-2017 19:28:19,152 DEBUG JobManager:152 - Successfully created execution graph from job graph Flink Streaming Job (705da72b157fe65f74e5d00f3d27db7d).
+19-Mar-2017 19:28:19,168  INFO JobSubmissionClientActor:111 - Job 705da72b157fe65f74e5d00f3d27db7d was successfully submitted to the JobManager akka://flink/deadLetters.
+19-Mar-2017 19:28:19,169  INFO JobManager:128 - Scheduling job 705da72b157fe65f74e5d00f3d27db7d (Flink Streaming Job).
+19-Mar-2017 19:28:19,169  INFO ExecutionGraph:965 - Job Flink Streaming Job (705da72b157fe65f74e5d00f3d27db7d) switched from state CREATED to RUNNING.
+19-Mar-2017 19:28:19,174  INFO ExecutionGraph:1025 - Source: Collection Source (1/1) (2f3bb009055770c1b344477ddd6944d0) switched from CREATED to SCHEDULED.
+19-Mar-2017 19:28:19,175  INFO JobSubmissionClientActor:275 - 03/19/2017 19:28:19	Job execution switched to status RUNNING.
+19-Mar-2017 19:28:19,176 DEBUG Scheduler:162 - Scheduling task {task=Source: Collection Source (1/1) - execution #0, sharingUnit=SlotSharingGroup [0a448493b4782967b150582570326227, bc764cd8ddf7a0cff126f51c16239658], locationConstraint=null}
+19-Mar-2017 19:28:19,176  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Source: Collection Source(1/1) switched to SCHEDULED 
+19-Mar-2017 19:28:19,181 DEBUG Scheduler:609 - Unconstrained assignment: Source: Collection Source (1/1) --> SimpleSlot (0)(0) - ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1) - ALLOCATED/ALIVE
+19-Mar-2017 19:28:19,188  INFO ExecutionGraph:1025 - Source: Collection Source (1/1) (2f3bb009055770c1b344477ddd6944d0) switched from SCHEDULED to DEPLOYING.
+19-Mar-2017 19:28:19,188  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Source: Collection Source(1/1) switched to DEPLOYING 
+19-Mar-2017 19:28:19,188  INFO ExecutionGraph:354 - Deploying Source: Collection Source (1/1) (attempt #0) to 127.0.0.1
+19-Mar-2017 19:28:19,190 DEBUG ExecutionGraph:301 - Creating task information for ExecutionJobVertex(Source: Collection Source | bc764cd8ddf7a0cff126f51c16239658){parallelism=1, maxParallelism=128, maxParallelismConfigured=false}
+19-Mar-2017 19:28:19,206  INFO ExecutionGraph:1025 - Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70) switched from CREATED to SCHEDULED.
+19-Mar-2017 19:28:19,207 DEBUG Scheduler:162 - Scheduling task {task=Map (1/4) - execution #0, sharingUnit=SlotSharingGroup [0a448493b4782967b150582570326227, bc764cd8ddf7a0cff126f51c16239658], locationConstraint=null}
+19-Mar-2017 19:28:19,207 DEBUG Scheduler:612 - Local assignment: Map (1/4) --> SimpleSlot (0)(1) - ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1) - ALLOCATED/ALIVE
+19-Mar-2017 19:28:19,208  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(1/4) switched to SCHEDULED 
+19-Mar-2017 19:28:19,211  INFO ExecutionGraph:1025 - Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70) switched from SCHEDULED to DEPLOYING.
+19-Mar-2017 19:28:19,212  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(1/4) switched to DEPLOYING 
+19-Mar-2017 19:28:19,213  INFO ExecutionGraph:354 - Deploying Map (1/4) (attempt #0) to 127.0.0.1
+19-Mar-2017 19:28:19,220 DEBUG ExecutionGraph:301 - Creating task information for ExecutionJobVertex(Map | 0a448493b4782967b150582570326227){parallelism=4, maxParallelism=128, maxParallelismConfigured=false}
+19-Mar-2017 19:28:19,226  INFO ExecutionGraph:1025 - Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0) switched from CREATED to SCHEDULED.
+19-Mar-2017 19:28:19,226  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(2/4) switched to SCHEDULED 
+19-Mar-2017 19:28:19,235 DEBUG Scheduler:162 - Scheduling task {task=Map (2/4) - execution #0, sharingUnit=SlotSharingGroup [0a448493b4782967b150582570326227, bc764cd8ddf7a0cff126f51c16239658], locationConstraint=null}
+19-Mar-2017 19:28:19,237 DEBUG Scheduler:612 - Local assignment: Map (2/4) --> SimpleSlot (1)(0) - ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1) - ALLOCATED/ALIVE
+19-Mar-2017 19:28:19,241  INFO ExecutionGraph:1025 - Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0) switched from SCHEDULED to DEPLOYING.
+19-Mar-2017 19:28:19,242  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(2/4) switched to DEPLOYING 
+19-Mar-2017 19:28:19,242  INFO ExecutionGraph:354 - Deploying Map (2/4) (attempt #0) to 127.0.0.1
+19-Mar-2017 19:28:19,243  INFO ExecutionGraph:1025 - Map (3/4) (c76281702934f610ec6633ad60eeec8f) switched from CREATED to SCHEDULED.
+19-Mar-2017 19:28:19,247  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(3/4) switched to SCHEDULED 
+19-Mar-2017 19:28:19,249 DEBUG Scheduler:162 - Scheduling task {task=Map (3/4) - execution #0, sharingUnit=SlotSharingGroup [0a448493b4782967b150582570326227, bc764cd8ddf7a0cff126f51c16239658], locationConstraint=null}
+19-Mar-2017 19:28:19,249 DEBUG Scheduler:612 - Local assignment: Map (3/4) --> SimpleSlot (2)(0) - ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1) - ALLOCATED/ALIVE
+19-Mar-2017 19:28:19,250  INFO ExecutionGraph:1025 - Map (3/4) (c76281702934f610ec6633ad60eeec8f) switched from SCHEDULED to DEPLOYING.
+19-Mar-2017 19:28:19,251  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(3/4) switched to DEPLOYING 
+19-Mar-2017 19:28:19,252  INFO ExecutionGraph:354 - Deploying Map (3/4) (attempt #0) to 127.0.0.1
+19-Mar-2017 19:28:19,261  INFO ExecutionGraph:1025 - Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d) switched from CREATED to SCHEDULED.
+19-Mar-2017 19:28:19,261  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(4/4) switched to SCHEDULED 
+19-Mar-2017 19:28:19,262 DEBUG Scheduler:162 - Scheduling task {task=Map (4/4) - execution #0, sharingUnit=SlotSharingGroup [0a448493b4782967b150582570326227, bc764cd8ddf7a0cff126f51c16239658], locationConstraint=null}
+19-Mar-2017 19:28:19,264 DEBUG Scheduler:612 - Local assignment: Map (4/4) --> SimpleSlot (3)(0) - ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1) - ALLOCATED/ALIVE
+19-Mar-2017 19:28:19,265  INFO ExecutionGraph:1025 - Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d) switched from SCHEDULED to DEPLOYING.
+19-Mar-2017 19:28:19,266  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(4/4) switched to DEPLOYING 
+19-Mar-2017 19:28:19,266  INFO ExecutionGraph:354 - Deploying Map (4/4) (attempt #0) to 127.0.0.1
+19-Mar-2017 19:28:19,349 DEBUG ResultPartition:176 - Source: Collection Source (1/1) (2f3bb009055770c1b344477ddd6944d0): Initialized ResultPartition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0 [PIPELINED, 4 subpartitions, 4 pending references]
+19-Mar-2017 19:28:19,468  INFO TaskManager:128 - Received task Source: Collection Source (1/1)
+19-Mar-2017 19:28:19,474  INFO Task:873 - Source: Collection Source (1/1) (2f3bb009055770c1b344477ddd6944d0) switched from CREATED to DEPLOYING.
+19-Mar-2017 19:28:19,480 DEBUG SingleInputGate:636 - Created 1 input channels (local: 1, remote: 0, unknown: 0).
+19-Mar-2017 19:28:19,480  INFO TaskManager:128 - Received task Map (1/4)
+19-Mar-2017 19:28:19,485 DEBUG SingleInputGate:636 - Created 1 input channels (local: 1, remote: 0, unknown: 0).
+19-Mar-2017 19:28:19,485  INFO TaskManager:128 - Received task Map (2/4)
+19-Mar-2017 19:28:19,512 DEBUG SingleInputGate:636 - Created 1 input channels (local: 1, remote: 0, unknown: 0).
+19-Mar-2017 19:28:19,513  INFO TaskManager:128 - Received task Map (3/4)
+19-Mar-2017 19:28:19,520 DEBUG SingleInputGate:636 - Created 1 input channels (local: 1, remote: 0, unknown: 0).
+19-Mar-2017 19:28:19,521  INFO TaskManager:128 - Received task Map (4/4)
+19-Mar-2017 19:28:19,523 DEBUG TaskManager:86 - TaskManager was triggered to register at JobManager, but is already registered
+19-Mar-2017 19:28:19,559  INFO Task:873 - Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0) switched from CREATED to DEPLOYING.
+19-Mar-2017 19:28:19,559  INFO Task:873 - Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d) switched from CREATED to DEPLOYING.
+19-Mar-2017 19:28:19,560  INFO FileSystem:110 - Created new CloseableRegistry org.apache.flink.core.fs.SafetyNetCloseableRegistry@4f8dafc for Map (4/4)
+19-Mar-2017 19:28:19,560  INFO Task:546 - Loading JAR files for task Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d) [DEPLOYING].
+19-Mar-2017 19:28:19,560 DEBUG Task:796 - Register task 6db23e4f7469d47090c99c1d5e11f36d at library cache manager took 0 milliseconds
+19-Mar-2017 19:28:19,568  INFO Task:873 - Map (3/4) (c76281702934f610ec6633ad60eeec8f) switched from CREATED to DEPLOYING.
+19-Mar-2017 19:28:19,569  INFO FileSystem:110 - Created new CloseableRegistry org.apache.flink.core.fs.SafetyNetCloseableRegistry@5685d955 for Map (2/4)
+19-Mar-2017 19:28:19,569  INFO Task:546 - Loading JAR files for task Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0) [DEPLOYING].
+19-Mar-2017 19:28:19,570 DEBUG Task:796 - Register task 412284b9d5b374d1f8d2609a1b9297c0 at library cache manager took 0 milliseconds
+19-Mar-2017 19:28:19,559  INFO FileSystem:110 - Created new CloseableRegistry org.apache.flink.core.fs.SafetyNetCloseableRegistry@4bad20bb for Source: Collection Source (1/1)
+19-Mar-2017 19:28:19,574  INFO Task:546 - Loading JAR files for task Source: Collection Source (1/1) (2f3bb009055770c1b344477ddd6944d0) [DEPLOYING].
+19-Mar-2017 19:28:19,574 DEBUG Task:796 - Register task 2f3bb009055770c1b344477ddd6944d0 at library cache manager took 0 milliseconds
+19-Mar-2017 19:28:19,576  INFO FileSystem:110 - Created new CloseableRegistry org.apache.flink.core.fs.SafetyNetCloseableRegistry@6cfbc94c for Map (3/4)
+19-Mar-2017 19:28:19,576  INFO Task:575 - Registering task at network: Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d) [DEPLOYING].
+19-Mar-2017 19:28:19,568  INFO Task:873 - Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70) switched from CREATED to DEPLOYING.
+19-Mar-2017 19:28:19,577  INFO FileSystem:110 - Created new CloseableRegistry org.apache.flink.core.fs.SafetyNetCloseableRegistry@6bfb34ed for Map (1/4)
+19-Mar-2017 19:28:19,577  INFO Task:546 - Loading JAR files for task Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70) [DEPLOYING].
+19-Mar-2017 19:28:19,577 DEBUG Task:796 - Register task 1317b3b002ed629900c8ba3d36cbcb70 at library cache manager took 0 milliseconds
+19-Mar-2017 19:28:19,578  INFO Task:575 - Registering task at network: Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70) [DEPLOYING].
+19-Mar-2017 19:28:19,586  INFO Task:873 - Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d) switched from DEPLOYING to RUNNING.
+19-Mar-2017 19:28:19,588 DEBUG StreamTask:217 - Initializing Map (4/4).
+19-Mar-2017 19:28:19,589  WARN StreamTask:708 - No state backend has been specified, using default state backend (Memory / JobManager)
+19-Mar-2017 19:28:19,590  INFO StreamTask:714 - State backend is set to heap memory (checkpoint to jobmanager)
+19-Mar-2017 19:28:19,576  INFO Task:546 - Loading JAR files for task Map (3/4) (c76281702934f610ec6633ad60eeec8f) [DEPLOYING].
+19-Mar-2017 19:28:19,717 DEBUG Task:796 - Register task c76281702934f610ec6633ad60eeec8f at library cache manager took 0 milliseconds
+19-Mar-2017 19:28:19,719  INFO Task:575 - Registering task at network: Map (3/4) (c76281702934f610ec6633ad60eeec8f) [DEPLOYING].
+19-Mar-2017 19:28:19,719  INFO Task:873 - Map (3/4) (c76281702934f610ec6633ad60eeec8f) switched from DEPLOYING to RUNNING.
+19-Mar-2017 19:28:19,720 DEBUG StreamTask:217 - Initializing Map (3/4).
+19-Mar-2017 19:28:19,720  WARN StreamTask:708 - No state backend has been specified, using default state backend (Memory / JobManager)
+19-Mar-2017 19:28:19,720  INFO StreamTask:714 - State backend is set to heap memory (checkpoint to jobmanager)
+19-Mar-2017 19:28:19,722 DEBUG StreamTask:254 - Invoking Map (3/4)
+19-Mar-2017 19:28:19,727 DEBUG LocalInputChannel:111 - LocalInputChannel [905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0]: Requesting LOCAL subpartition 2 of partition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0.
+19-Mar-2017 19:28:19,729 DEBUG SingleInputGate:327 - Retriggering partition request 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0:2.
+19-Mar-2017 19:28:19,576  INFO Task:575 - Registering task at network: Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0) [DEPLOYING].
+19-Mar-2017 19:28:19,730  INFO Task:873 - Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0) switched from DEPLOYING to RUNNING.
+19-Mar-2017 19:28:19,730 DEBUG StreamTask:217 - Initializing Map (2/4).
+19-Mar-2017 19:28:19,731  WARN StreamTask:708 - No state backend has been specified, using default state backend (Memory / JobManager)
+19-Mar-2017 19:28:19,731  INFO StreamTask:714 - State backend is set to heap memory (checkpoint to jobmanager)
+19-Mar-2017 19:28:19,739 DEBUG StreamTask:254 - Invoking Map (2/4)
+19-Mar-2017 19:28:19,739 DEBUG LocalInputChannel:111 - LocalInputChannel [905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0]: Requesting LOCAL subpartition 1 of partition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0.
+19-Mar-2017 19:28:19,739 DEBUG SingleInputGate:327 - Retriggering partition request 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0:1.
+19-Mar-2017 19:28:19,741  INFO ExecutionGraph:1025 - Map (3/4) (c76281702934f610ec6633ad60eeec8f) switched from DEPLOYING to RUNNING.
+19-Mar-2017 19:28:19,742  INFO ExecutionGraph:1025 - Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0) switched from DEPLOYING to RUNNING.
+19-Mar-2017 19:28:19,744  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(3/4) switched to RUNNING 
+19-Mar-2017 19:28:19,745  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(2/4) switched to RUNNING 
+19-Mar-2017 19:28:19,576  INFO Task:575 - Registering task at network: Source: Collection Source (1/1) (2f3bb009055770c1b344477ddd6944d0) [DEPLOYING].
+19-Mar-2017 19:28:19,747 DEBUG ResultPartitionManager:61 - Registered ResultPartition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0 [PIPELINED, 4 subpartitions, 4 pending references].
+19-Mar-2017 19:28:19,747  INFO Task:873 - Source: Collection Source (1/1) (2f3bb009055770c1b344477ddd6944d0) switched from DEPLOYING to RUNNING.
+19-Mar-2017 19:28:19,747 DEBUG StreamTask:217 - Initializing Source: Collection Source (1/1).
+19-Mar-2017 19:28:19,747  WARN StreamTask:708 - No state backend has been specified, using default state backend (Memory / JobManager)
+19-Mar-2017 19:28:19,748  INFO StreamTask:714 - State backend is set to heap memory (checkpoint to jobmanager)
+19-Mar-2017 19:28:19,777 DEBUG OperatorChain:331 - Using partitioner REBALANCE for output 0 of task 
+19-Mar-2017 19:28:19,789 DEBUG StreamTask:254 - Invoking Source: Collection Source (1/1)
+19-Mar-2017 19:28:19,803  INFO ExecutionGraph:1025 - Source: Collection Source (1/1) (2f3bb009055770c1b344477ddd6944d0) switched from DEPLOYING to RUNNING.
+19-Mar-2017 19:28:19,803  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Source: Collection Source(1/1) switched to RUNNING 
+19-Mar-2017 19:28:19,716  INFO Task:873 - Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70) switched from DEPLOYING to RUNNING.
+19-Mar-2017 19:28:19,807 DEBUG StreamTask:217 - Initializing Map (1/4).
+19-Mar-2017 19:28:19,807  WARN StreamTask:708 - No state backend has been specified, using default state backend (Memory / JobManager)
+19-Mar-2017 19:28:19,807  INFO StreamTask:714 - State backend is set to heap memory (checkpoint to jobmanager)
+19-Mar-2017 19:28:19,808 DEBUG StreamTask:254 - Invoking Map (1/4)
+19-Mar-2017 19:28:19,809 DEBUG LocalInputChannel:111 - LocalInputChannel [905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0]: Requesting LOCAL subpartition 0 of partition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0.
+19-Mar-2017 19:28:19,810 DEBUG ResultPartitionManager:80 - Requesting subpartition 0 of ResultPartition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0 [PIPELINED, 4 subpartitions, 4 pending references].
+19-Mar-2017 19:28:19,810 DEBUG PipelinedSubpartition:175 - Creating read view for subpartition 0 of partition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0.
+19-Mar-2017 19:28:19,811 DEBUG ResultPartition:354 - Created PipelinedSubpartitionView(index: 0) of ResultPartition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0
+19-Mar-2017 19:28:19,716  INFO ExecutionGraph:1025 - Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d) switched from DEPLOYING to RUNNING.
+19-Mar-2017 19:28:19,815  INFO ExecutionGraph:1025 - Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70) switched from DEPLOYING to RUNNING.
+19-Mar-2017 19:28:19,816  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(4/4) switched to RUNNING 
+19-Mar-2017 19:28:19,816  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(1/4) switched to RUNNING 
+19-Mar-2017 19:28:19,710 DEBUG StreamTask:254 - Invoking Map (4/4)
+19-Mar-2017 19:28:19,817 DEBUG LocalInputChannel:111 - LocalInputChannel [905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0]: Requesting LOCAL subpartition 3 of partition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0.
+19-Mar-2017 19:28:19,818 DEBUG ResultPartitionManager:80 - Requesting subpartition 3 of ResultPartition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0 [PIPELINED, 4 subpartitions, 4 pending references].
+19-Mar-2017 19:28:19,818 DEBUG PipelinedSubpartition:175 - Creating read view for subpartition 3 of partition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0.
+19-Mar-2017 19:28:19,818 DEBUG ResultPartition:354 - Created PipelinedSubpartitionView(index: 3) of ResultPartition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0
+19-Mar-2017 19:28:19,819 DEBUG StreamTask:283 - Finished task Source: Collection Source (1/1)
+19-Mar-2017 19:28:19,819 DEBUG StreamTask:297 - Closed operators for task Source: Collection Source (1/1)
+19-Mar-2017 19:28:19,825  INFO FetchHDFSAudit:92 - AuditPOJO [logdate=2016-05-19 13:12:39.796, allowed=true, ugi=Eedc_HDP_s_T-amb-qa@EMEA.CORPDIR.NET, auth=KERBEROS, ip=/53.20.44.22, cmd=getfileinfo, src=/tmp/hive/Eedc_HDP_s_T-amb-qa/d0157580-a37b-479b-880f-06f3f636ba67/_tmp_space.db, dst=null, perm=null, proto=rpc]
+19-Mar-2017 19:28:19,829 ERROR StreamTask:446 - Error during disposal of stream operator.
+java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.closeQuietly(Ljava/io/Closeable;)V
+	at org.apache.flink.streaming.api.operators.AbstractStreamOperator.dispose(AbstractStreamOperator.java:325)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.dispose(AbstractUdfStreamOperator.java:124)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.disposeAllOperators(StreamTask.java:442)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:343)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:655)
+	at java.lang.Thread.run(Unknown Source)
+19-Mar-2017 19:28:19,832 DEBUG LocalInputChannel:111 - LocalInputChannel [905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0]: Requesting LOCAL subpartition 2 of partition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0.
+19-Mar-2017 19:28:19,839 DEBUG ResultPartitionManager:80 - Requesting subpartition 2 of ResultPartition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0 [PIPELINED, 4 subpartitions, 4 pending references].
+19-Mar-2017 19:28:19,839 DEBUG PipelinedSubpartition:175 - Creating read view for subpartition 2 of partition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0.
+19-Mar-2017 19:28:19,840 DEBUG ResultPartition:354 - Created PipelinedSubpartitionView(index: 2) of ResultPartition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0
+19-Mar-2017 19:28:19,843  INFO FetchHDFSAudit:92 - AuditPOJO [logdate=2016-05-19 13:12:39.779, allowed=true, ugi=Eedc_HDP_s_T-amb-qa@EMEA.CORPDIR.NET, auth=KERBEROS, ip=/53.20.44.22, cmd=getfileinfo, src=/tmp/hive/Eedc_HDP_s_T-amb-qa/d0157580-a37b-479b-880f-06f3f636ba67, dst=null, perm=null, proto=rpc]
+19-Mar-2017 19:28:19,844  INFO FetchHDFSAudit:92 - AuditPOJO [logdate=2016-05-19 13:12:41.860, allowed=true, ugi=Eedc_HDP_s_T-amb-qa@EMEA.CORPDIR.NET, auth=KERBEROS, ip=/53.20.44.22, cmd=delete, src=/tmp/hive/Eedc_HDP_s_T-amb-qa/d0157580-a37b-479b-880f-06f3f636ba67, dst=null, perm=null, proto=rpc]
+19-Mar-2017 19:28:19,846  INFO Task:875 - Source: Collection Source (1/1) (2f3bb009055770c1b344477ddd6944d0) switched from RUNNING to FAILED.
+java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.closeQuietly(Ljava/io/Closeable;)V
+	at org.apache.flink.streaming.api.operators.AbstractStreamOperator.dispose(AbstractStreamOperator.java:325)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.dispose(AbstractUdfStreamOperator.java:124)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.tryDisposeAllOperators(StreamTask.java:418)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:304)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:655)
+	at java.lang.Thread.run(Unknown Source)
+19-Mar-2017 19:28:19,871  INFO Task:744 - Freeing task resources for Source: Collection Source (1/1) (2f3bb009055770c1b344477ddd6944d0).
+19-Mar-2017 19:28:19,871 DEBUG NetworkEnvironment:218 - Unregister task Source: Collection Source (1/1) from network environment (state: FAILED).
+19-Mar-2017 19:28:19,889 DEBUG ResultPartition:313 - Source: Collection Source (1/1) (2f3bb009055770c1b344477ddd6944d0): Releasing ResultPartition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0 [PIPELINED, 4 subpartitions, 4 pending references].
+19-Mar-2017 19:28:19,889 DEBUG PipelinedSubpartition:139 - Released PipelinedSubpartition [number of buffers: 1 (637 bytes), finished? false, read view? false].
+19-Mar-2017 19:28:19,891 DEBUG PipelinedSubpartition:139 - Released PipelinedSubpartition [number of buffers: 1 (616 bytes), finished? false, read view? false].
+19-Mar-2017 19:28:19,895 DEBUG PipelinedSubpartition:139 - Released PipelinedSubpartition [number of buffers: 1 (560 bytes), finished? false, read view? false].
+19-Mar-2017 19:28:19,895 DEBUG PipelinedSubpartition:139 - Released PipelinedSubpartition [number of buffers: 1 (296 bytes), finished? false, read view? false].
+19-Mar-2017 19:28:19,897 DEBUG LocalInputChannel:111 - LocalInputChannel [905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0]: Requesting LOCAL subpartition 1 of partition 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0.
+19-Mar-2017 19:28:19,910 DEBUG ResultPartitionManager:105 - Released all partitions produced by 2f3bb009055770c1b344477ddd6944d0.
+19-Mar-2017 19:28:19,911  INFO FileSystem:121 - Ensuring all FileSystem streams are closed for Source: Collection Source (1/1)
+19-Mar-2017 19:28:19,913  INFO TaskManager:128 - Un-registering task and sending final execution state FAILED to JobManager for task Source: Collection Source (2f3bb009055770c1b344477ddd6944d0)
+19-Mar-2017 19:28:19,934  INFO ExecutionGraph:1027 - Source: Collection Source (1/1) (2f3bb009055770c1b344477ddd6944d0) switched from RUNNING to FAILED.
+java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.closeQuietly(Ljava/io/Closeable;)V
+	at org.apache.flink.streaming.api.operators.AbstractStreamOperator.dispose(AbstractStreamOperator.java:325)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.dispose(AbstractUdfStreamOperator.java:124)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.tryDisposeAllOperators(StreamTask.java:418)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:304)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:655)
+	at java.lang.Thread.run(Unknown Source)
+19-Mar-2017 19:28:19,937  INFO ExecutionGraph:965 - Job Flink Streaming Job (705da72b157fe65f74e5d00f3d27db7d) switched from state RUNNING to FAILING.
+java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.closeQuietly(Ljava/io/Closeable;)V
+	at org.apache.flink.streaming.api.operators.AbstractStreamOperator.dispose(AbstractStreamOperator.java:325)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.dispose(AbstractUdfStreamOperator.java:124)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.tryDisposeAllOperators(StreamTask.java:418)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:304)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:655)
+	at java.lang.Thread.run(Unknown Source)
+19-Mar-2017 19:28:19,941  INFO ExecutionGraph:1025 - Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70) switched from RUNNING to CANCELING.
+19-Mar-2017 19:28:19,949  INFO ExecutionGraph:1025 - Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0) switched from RUNNING to CANCELING.
+19-Mar-2017 19:28:19,952  INFO ExecutionGraph:1025 - Map (3/4) (c76281702934f610ec6633ad60eeec8f) switched from RUNNING to CANCELING.
+19-Mar-2017 19:28:19,955  INFO ExecutionGraph:1025 - Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d) switched from RUNNING to CANCELING.
+19-Mar-2017 19:28:19,956 DEBUG SlotSharingGroupAssignment:478 - Release simple slot SimpleSlot (0)(0) - ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1) - RELEASED.
+19-Mar-2017 19:28:19,958  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Source: Collection Source(1/1) switched to FAILED 
+java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.closeQuietly(Ljava/io/Closeable;)V
+	at org.apache.flink.streaming.api.operators.AbstractStreamOperator.dispose(AbstractStreamOperator.java:325)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.dispose(AbstractUdfStreamOperator.java:124)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.tryDisposeAllOperators(StreamTask.java:418)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:304)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:655)
+	at java.lang.Thread.run(Unknown Source)
+
+19-Mar-2017 19:28:19,959  INFO JobSubmissionClientActor:280 - 03/19/2017 19:28:19	Job execution switched to status FAILING.
+java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.closeQuietly(Ljava/io/Closeable;)V
+	at org.apache.flink.streaming.api.operators.AbstractStreamOperator.dispose(AbstractStreamOperator.java:325)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.dispose(AbstractUdfStreamOperator.java:124)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.tryDisposeAllOperators(StreamTask.java:418)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:304)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:655)
+	at java.lang.Thread.run(Unknown Source)
+19-Mar-2017 19:28:19,960  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(1/4) switched to CANCELING 
+19-Mar-2017 19:28:19,960  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(2/4) switched to CANCELING 
+19-Mar-2017 19:28:19,961  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(3/4) switched to CANCELING 
+19-Mar-2017 19:28:19,962  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:19	Map(4/4) switched to CANCELING 
+19-Mar-2017 19:28:19,968  INFO TaskManager:128 - Discarding the results produced by task execution 2f3bb009055770c1b344477ddd6944d0
+19-Mar-2017 19:28:19,969 DEBUG ResultPartitionManager:105 - Released all partitions produced by 2f3bb009055770c1b344477ddd6944d0.
+19-Mar-2017 19:28:19,970  INFO Task:926 - Attempting to cancel task Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70).
+19-Mar-2017 19:28:19,971  INFO Task:873 - Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70) switched from RUNNING to CANCELING.
+19-Mar-2017 19:28:19,975  INFO Task:987 - Triggering cancellation of task code Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70).
+19-Mar-2017 19:28:19,997 DEBUG SingleInputGate:327 - Retriggering partition request 905efab155174b6334b1a63348541203@2f3bb009055770c1b344477ddd6944d0:1.
+19-Mar-2017 19:28:20,001  INFO Task:926 - Attempting to cancel task Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0).
+19-Mar-2017 19:28:20,002  INFO Task:873 - Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0) switched from RUNNING to CANCELING.
+19-Mar-2017 19:28:20,005  INFO Task:987 - Triggering cancellation of task code Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0).
+19-Mar-2017 19:28:20,006  INFO Task:926 - Attempting to cancel task Map (3/4) (c76281702934f610ec6633ad60eeec8f).
+19-Mar-2017 19:28:20,006  INFO Task:873 - Map (3/4) (c76281702934f610ec6633ad60eeec8f) switched from RUNNING to CANCELING.
+19-Mar-2017 19:28:20,007  INFO Task:987 - Triggering cancellation of task code Map (3/4) (c76281702934f610ec6633ad60eeec8f).
+19-Mar-2017 19:28:20,008  INFO Task:926 - Attempting to cancel task Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d).
+19-Mar-2017 19:28:20,008  INFO Task:873 - Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d) switched from RUNNING to CANCELING.
+19-Mar-2017 19:28:20,015  INFO Task:987 - Triggering cancellation of task code Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d).
+19-Mar-2017 19:28:20,016 DEBUG SingleInputGate:355 - Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70): Releasing org.apache.flink.runtime.io.network.partition.consumer.SingleInputGate@73e51558.
+19-Mar-2017 19:28:20,017  INFO FetchHDFSAudit:92 - AuditPOJO [logdate=2016-05-19 13:12:39.761, allowed=true, ugi=Eedc_HDP_s_T-amb-qa@EMEA.CORPDIR.NET, auth=KERBEROS, ip=/53.20.44.22, cmd=getfileinfo, src=/tmp/hive/Eedc_HDP_s_T-amb-qa/d0157580-a37b-479b-880f-06f3f636ba67, dst=null, perm=null, proto=rpc]
+19-Mar-2017 19:28:20,018 ERROR StreamTask:446 - Error during disposal of stream operator.
+java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.closeQuietly(Ljava/io/Closeable;)V
+	at org.apache.flink.streaming.api.operators.AbstractStreamOperator.dispose(AbstractStreamOperator.java:325)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.dispose(AbstractUdfStreamOperator.java:124)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.disposeAllOperators(StreamTask.java:442)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:343)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:655)
+	at java.lang.Thread.run(Unknown Source)
+19-Mar-2017 19:28:20,019  INFO Task:873 - Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70) switched from CANCELING to CANCELED.
+19-Mar-2017 19:28:20,020  INFO Task:744 - Freeing task resources for Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70).
+19-Mar-2017 19:28:20,020 DEBUG NetworkEnvironment:218 - Unregister task Map (1/4) from network environment (state: CANCELED).
+19-Mar-2017 19:28:20,021 DEBUG ResultPartitionManager:105 - Released all partitions produced by 1317b3b002ed629900c8ba3d36cbcb70.
+19-Mar-2017 19:28:20,021  INFO FileSystem:121 - Ensuring all FileSystem streams are closed for Map (1/4)
+19-Mar-2017 19:28:20,022  INFO TaskManager:128 - Un-registering task and sending final execution state CANCELED to JobManager for task Map (1317b3b002ed629900c8ba3d36cbcb70)
+19-Mar-2017 19:28:20,024  INFO ExecutionGraph:1025 - Map (1/4) (1317b3b002ed629900c8ba3d36cbcb70) switched from CANCELING to CANCELED.
+19-Mar-2017 19:28:20,025 DEBUG SlotSharingGroupAssignment:478 - Release simple slot SimpleSlot (0)(1) - ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1) - RELEASED.
+19-Mar-2017 19:28:20,025 DEBUG Instance:297 - Return allocated slot Shared (0) - ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1) - RELEASED.
+19-Mar-2017 19:28:20,026  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:20	Map(1/4) switched to CANCELED 
+19-Mar-2017 19:28:20,028 DEBUG SingleInputGate:355 - Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0): Releasing org.apache.flink.runtime.io.network.partition.consumer.SingleInputGate@36d8d1f6.
+19-Mar-2017 19:28:20,028 ERROR StreamTask:446 - Error during disposal of stream operator.
+java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.closeQuietly(Ljava/io/Closeable;)V
+	at org.apache.flink.streaming.api.operators.AbstractStreamOperator.dispose(AbstractStreamOperator.java:325)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.dispose(AbstractUdfStreamOperator.java:124)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.disposeAllOperators(StreamTask.java:442)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:343)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:655)
+	at java.lang.Thread.run(Unknown Source)
+19-Mar-2017 19:28:20,029  INFO Task:873 - Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0) switched from CANCELING to CANCELED.
+19-Mar-2017 19:28:20,029  INFO Task:744 - Freeing task resources for Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0).
+19-Mar-2017 19:28:20,029 DEBUG NetworkEnvironment:218 - Unregister task Map (2/4) from network environment (state: CANCELED).
+19-Mar-2017 19:28:20,029 DEBUG ResultPartitionManager:105 - Released all partitions produced by 412284b9d5b374d1f8d2609a1b9297c0.
+19-Mar-2017 19:28:20,029  INFO FileSystem:121 - Ensuring all FileSystem streams are closed for Map (2/4)
+19-Mar-2017 19:28:20,030  INFO TaskManager:128 - Un-registering task and sending final execution state CANCELED to JobManager for task Map (412284b9d5b374d1f8d2609a1b9297c0)
+19-Mar-2017 19:28:20,031  INFO ExecutionGraph:1025 - Map (2/4) (412284b9d5b374d1f8d2609a1b9297c0) switched from CANCELING to CANCELED.
+19-Mar-2017 19:28:20,031 DEBUG SlotSharingGroupAssignment:478 - Release simple slot SimpleSlot (1)(0) - ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1) - RELEASED.
+19-Mar-2017 19:28:20,031 DEBUG Instance:297 - Return allocated slot Shared (1) - ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1) - RELEASED.
+19-Mar-2017 19:28:20,032  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:20	Map(2/4) switched to CANCELED 
+19-Mar-2017 19:28:20,035 DEBUG SingleInputGate:355 - Map (3/4) (c76281702934f610ec6633ad60eeec8f): Releasing org.apache.flink.runtime.io.network.partition.consumer.SingleInputGate@65af36a3.
+19-Mar-2017 19:28:20,036 ERROR StreamTask:446 - Error during disposal of stream operator.
+java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.closeQuietly(Ljava/io/Closeable;)V
+	at org.apache.flink.streaming.api.operators.AbstractStreamOperator.dispose(AbstractStreamOperator.java:325)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.dispose(AbstractUdfStreamOperator.java:124)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.disposeAllOperators(StreamTask.java:442)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:343)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:655)
+	at java.lang.Thread.run(Unknown Source)
+19-Mar-2017 19:28:20,039  INFO Task:873 - Map (3/4) (c76281702934f610ec6633ad60eeec8f) switched from CANCELING to CANCELED.
+19-Mar-2017 19:28:20,040  INFO Task:744 - Freeing task resources for Map (3/4) (c76281702934f610ec6633ad60eeec8f).
+19-Mar-2017 19:28:20,040 DEBUG NetworkEnvironment:218 - Unregister task Map (3/4) from network environment (state: CANCELED).
+19-Mar-2017 19:28:20,040 DEBUG ResultPartitionManager:105 - Released all partitions produced by c76281702934f610ec6633ad60eeec8f.
+19-Mar-2017 19:28:20,040  INFO FileSystem:121 - Ensuring all FileSystem streams are closed for Map (3/4)
+19-Mar-2017 19:28:20,040  INFO TaskManager:128 - Un-registering task and sending final execution state CANCELED to JobManager for task Map (c76281702934f610ec6633ad60eeec8f)
+19-Mar-2017 19:28:20,041  INFO ExecutionGraph:1025 - Map (3/4) (c76281702934f610ec6633ad60eeec8f) switched from CANCELING to CANCELED.
+19-Mar-2017 19:28:20,042 DEBUG SlotSharingGroupAssignment:478 - Release simple slot SimpleSlot (2)(0) - ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1) - RELEASED.
+19-Mar-2017 19:28:20,042 DEBUG Instance:297 - Return allocated slot Shared (2) - ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1) - RELEASED.
+19-Mar-2017 19:28:20,042  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:20	Map(3/4) switched to CANCELED 
+19-Mar-2017 19:28:20,043 DEBUG SingleInputGate:355 - Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d): Releasing org.apache.flink.runtime.io.network.partition.consumer.SingleInputGate@1062fc3.
+19-Mar-2017 19:28:20,043 ERROR StreamTask:446 - Error during disposal of stream operator.
+java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.closeQuietly(Ljava/io/Closeable;)V
+	at org.apache.flink.streaming.api.operators.AbstractStreamOperator.dispose(AbstractStreamOperator.java:325)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.dispose(AbstractUdfStreamOperator.java:124)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.disposeAllOperators(StreamTask.java:442)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:343)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:655)
+	at java.lang.Thread.run(Unknown Source)
+19-Mar-2017 19:28:20,044  INFO Task:873 - Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d) switched from CANCELING to CANCELED.
+19-Mar-2017 19:28:20,044  INFO Task:744 - Freeing task resources for Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d).
+19-Mar-2017 19:28:20,044 DEBUG NetworkEnvironment:218 - Unregister task Map (4/4) from network environment (state: CANCELED).
+19-Mar-2017 19:28:20,044 DEBUG ResultPartitionManager:105 - Released all partitions produced by 6db23e4f7469d47090c99c1d5e11f36d.
+19-Mar-2017 19:28:20,048  INFO FileSystem:121 - Ensuring all FileSystem streams are closed for Map (4/4)
+19-Mar-2017 19:28:20,049  INFO TaskManager:128 - Un-registering task and sending final execution state CANCELED to JobManager for task Map (6db23e4f7469d47090c99c1d5e11f36d)
+19-Mar-2017 19:28:20,050  INFO ExecutionGraph:1025 - Map (4/4) (6db23e4f7469d47090c99c1d5e11f36d) switched from CANCELING to CANCELED.
+19-Mar-2017 19:28:20,050 DEBUG SlotSharingGroupAssignment:478 - Release simple slot SimpleSlot (3)(0) - ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1) - RELEASED.
+19-Mar-2017 19:28:20,050  INFO JobSubmissionClientActor:265 - 03/19/2017 19:28:20	Map(4/4) switched to CANCELED 
+19-Mar-2017 19:28:20,050 DEBUG Instance:297 - Return allocated slot Shared (3) - ResourceID{resourceId='d1e1664effcd62bb8a6b19e56735d2f3'} @ 127.0.0.1 (dataPort=-1) - RELEASED.
+19-Mar-2017 19:28:20,051 DEBUG ExecutionGraph:1044 - Try to restart or fail the job Flink Streaming Job (705da72b157fe65f74e5d00f3d27db7d) if no longer possible.
+java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.closeQuietly(Ljava/io/Closeable;)V
+	at org.apache.flink.streaming.api.operators.AbstractStreamOperator.dispose(AbstractStreamOperator.java:325)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.dispose(AbstractUdfStreamOperator.java:124)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.tryDisposeAllOperators(StreamTask.java:418)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:304)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:655)
+	at java.lang.Thread.run(Unknown Source)
+19-Mar-2017 19:28:20,051  INFO ExecutionGraph:965 - Job Flink Streaming Job (705da72b157fe65f74e5d00f3d27db7d) switched from state FAILING to FAILED.
+java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.closeQuietly(Ljava/io/Closeable;)V
+	at org.apache.flink.streaming.api.operators.AbstractStreamOperator.dispose(AbstractStreamOperator.java:325)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.dispose(AbstractUdfStreamOperator.java:124)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.tryDisposeAllOperators(StreamTask.java:418)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:304)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:655)
+	at java.lang.Thread.run(Unknown Source)
+19-Mar-2017 19:28:20,053  INFO JobSubmissionClientActor:275 - 03/19/2017 19:28:20	Job execution switched to status FAILED.
+19-Mar-2017 19:28:20,058  INFO ExecutionGraph:1067 - Could not restart the job Flink Streaming Job (705da72b157fe65f74e5d00f3d27db7d) because the restart strategy prevented it.
+java.lang.NoSuchMethodError: org.apache.commons.io.IOUtils.closeQuietly(Ljava/io/Closeable;)V
+	at org.apache.flink.streaming.api.operators.AbstractStreamOperator.dispose(AbstractStreamOperator.java:325)
+	at org.apache.flink.streaming.api.operators.AbstractUdfStreamOperator.dispose(AbstractUdfStreamOperator.java:124)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.tryDisposeAllOperators(StreamTask.java:418)
+	at org.apache.flink.streaming.runtime.tasks.StreamTask.invoke(StreamTask.java:304)
+	at org.apache.flink.runtime.taskmanager.Task.run(Task.java:655)
+	at java.lang.Thread.run(Unknown Source)
+19-Mar-2017 19:28:20,058  INFO CheckpointCoordinator:256 - Stopping checkpoint coordinator for job 705da72b157fe65f74e5d00f3d27db7d
+19-Mar-2017 19:28:20,059  INFO StandaloneCompletedCheckpointStore:89 - Shutting down
+19-Mar-2017 19:28:20,074 DEBUG JobSubmissionClientActor:167 - Received JobResultFailure message from JobManager
+19-Mar-2017 19:28:20,074  INFO JobSubmissionClientActor:322 - Terminate JobClientActor.
+19-Mar-2017 19:28:20,074  INFO JobSubmissionClientActor:302 - Disconnect from JobManager Actor[akka://flink/user/jobmanager_1#-2132543667].
+19-Mar-2017 19:28:20,076  INFO JobClient:320 - Job execution failed
+19-Mar-2017 19:28:20,076  INFO FlinkMiniCluster:407 - Stopping FlinkMiniCluster.
+19-Mar-2017 19:28:20,090  INFO JobManager:128 - Stopping JobManager akka://flink/user/jobmanager_1.
+19-Mar-2017 19:28:20,093  INFO TaskManager:128 - Stopping TaskManager akka://flink/user/taskmanager_1#331516063.
+19-Mar-2017 19:28:20,094  INFO TaskManager:128 - Disassociating from JobManager
+19-Mar-2017 19:28:20,098  INFO BlobCache:227 - Shutting down BlobCache
+19-Mar-2017 19:28:20,102 DEBUG IOManager:148 - Shutting down I/O manager.
+19-Mar-2017 19:28:20,105  INFO BlobServer:341 - Stopped BLOB server at 0.0.0.0:49254
+19-Mar-2017 19:28:20,107 DEBUG JobManager:86 - Job manager akka://flink/user/jobmanager_1 is completely stopped.
+19-Mar-2017 19:28:20,107  INFO IOManager:110 - I/O manager removed spill file directory C:\Users\HEMANT~1.HEM\AppData\Local\Temp\flink-io-be3506ea-8350-4ad7-be54-82fcd614dc4e
+19-Mar-2017 19:28:20,120  INFO NetworkEnvironment:298 - Shutting down the network environment and its components.
+19-Mar-2017 19:28:20,121 DEBUG NetworkEnvironment:310 - Shutting down network connection manager
+19-Mar-2017 19:28:20,121 DEBUG NetworkEnvironment:319 - Shutting down intermediate result partition manager
+19-Mar-2017 19:28:20,122 DEBUG ResultPartitionManager:112 - Releasing 0 partitions because of shutdown.
+19-Mar-2017 19:28:20,125 DEBUG ResultPartitionManager:123 - Successful shutdown.
+19-Mar-2017 19:28:20,175  INFO TaskManager:128 - Task manager akka://flink/user/taskmanager_1 is completely shut down.
+19-Mar-2017 19:28:20,185 DEBUG EventStream:77 - shutting down: StandardOutLogger started

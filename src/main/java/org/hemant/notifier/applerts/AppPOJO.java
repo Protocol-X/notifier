@@ -1,6 +1,6 @@
 package org.hemant.notifier.applerts;
 
-/* Hemant Dindi */
+
 public class AppPOJO {
     String id;
     String name;

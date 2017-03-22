@@ -1,5 +1,4 @@
 package org.hemant.notifier.applerts;
-/* Hemant Dindi */
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 
 public class HTTPJSONStream implements SourceFunction<FlinkJSONObject> {

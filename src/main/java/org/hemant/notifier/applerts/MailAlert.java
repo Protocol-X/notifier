@@ -1,5 +1,4 @@
 package org.hemant.notifier.applerts;
-/* Hemant Dindi */
 import org.apache.commons.mail.*;
 import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.log4j.Logger;

@@ -1,6 +1,5 @@
 package org.hemant.notifier.db;
 
-/* Hemant Dindi */
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;

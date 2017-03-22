@@ -1,5 +1,4 @@
 package org.hemant.notifier.stream;
-/* Hemant Dindi */
 
 import java.util.Properties;
 
